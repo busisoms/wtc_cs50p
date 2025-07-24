@@ -8,13 +8,14 @@ If it’s not time for a meal, don’t output anything at all.
 
 def main():
     prompt = input("What time is it? ").split(' ')
-    time = float(convert(prompt))
+    time = convert(prompt[0])
 
-    if len(prompt) == 2 and prompt[1] == 'p.m.':
-        if time < 12:
+    # handling for 12 hour format
+    if len(prompt) == 2:
+        if time < 12 and prompt[1] == 'p.m.':
             time += 12
-    elif time == 12 and prompt[1] == 'a.m.':
-        time -= 12
+        elif time == 12 and prompt[1] == 'a.m.':
+            time -= 12
 
     if time >= 7 and time <= 8:
         print("breakfast time")
@@ -32,7 +33,7 @@ def convert(time):
     returns hours as float 
     """
 
-    str_time = time[0].split(':')
+    str_time = time.split(':')
     hours, mins = str_time
     hours = (float(mins) / 60) + float(hours)
     return hours
