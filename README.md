@@ -13,7 +13,16 @@ This repository documents my journey through WeThinkCode_'s pre-Academic learnin
     - string methods
     - return statements and side effects
 
-### week_1: 
+### week_1: Conditionals
+- **key concepts**
+   - Conditional statements like `if`, `elif`, `else` statements and `match` statements
+- **key skills**
+   - boolean expressions
+   - pythonic syntax
+   - comparison operators
+
+### week_2: loops
+
 
 
 
